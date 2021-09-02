@@ -1,0 +1,184 @@
+/*Estilos propios del interactivo*/
+
+.partiture-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.draggables-notes-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: #ecd1d1;
+}
+
+.audio-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+}
+
+.evaluation-div{
+    text-align: center;
+    height: 8vh;
+}
+
+/* --------------- ESTILOS GENERALES ---------------*/
+/*
+.svg-note{
+    width: 100%;
+    height: auto;
+}*/
+
+.partiture-svg{
+    width: 100%;
+    height: auto;
+}
+
+
+/* HEADER */
+
+.marc{
+    display: flex;
+}
+.marc h2{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.marc-text{
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+}
+.marc-icons{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* INFO */
+
+.info-wrapper {
+    height: 100%;
+}
+
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 90vh;;
+}
+
+.wrapper:nth-child(2){
+    background: rgba(255, 0, 0, 0.2);
+}
+
+/* ARQUITECTURA CENTRAL */
+
+.svg-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+}
+
+.container-parte-superior{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+}
+
+.container-parte-inferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    background-color: #FEFFA3;
+    padding-top: 0.5vh;
+}
+
+/*Clases genéricas*/
+
+.textGrow{
+    font-size: 1.5vh;
+}
+
+.resetVisibility{
+    visibility: hidden;
+}
+
+.center-text{
+    display: flex;
+    justify-content: center;
+}
+
+.correct{
+    color: rgb(22, 129, 22);
+}
+.incorrect{
+    color: rgb(148, 21, 21);
+}
+
+/* BOTONES */
+
+button{
+    background-color: #e7e7e7;
+    text-align: center;
+    font-size: 14px;
+    border-color: none;
+    color: none;
+}
+
+.btn-reset {
+    background-color: #808080 !important; 
+    color: white;
+    border: none;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+.btn-reset:hover{
+    background-color: rgb(246, 196, 86) !important;
+}
+.btn-reset:active{
+    background-color: chocolate !important;
+}
+
+
+/*Cambio de tamños según tamaño de pantalla*/
+
+/*HEIGHT*/
+
+@media screen and (max-height: 840px){
+    /*menys alt < 840*/
+
+}
+
+@media screen and (min-height: 840px){
+
+} 
+
+/*WIDTH*/
+
+@media screen and (max-width: 700px){
+
+}
+
+@media screen and (min-width: 700px){
+
+    
+}
+

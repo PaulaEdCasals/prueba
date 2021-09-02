@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Helvetica';
+  src:  url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica.woff') format('woff'),
+        url('../fonts/Helvetica.ttf') format('truetype'),
+        url('../fonts/Helvetica.svg#Helvetica') format('svg');
+  font-weight: thin;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: rgb(255, 255, 255);
+  font-family: 'Helvetica';
+  font-weight: 400;
+  text-align: center;
+}
+
+.marc h2 {
+  padding: 22px 20px;
+  font-size: 28px;
+}
+@media screen and (max-width: 1024px){
+  .marc h2 {
+    padding: 23px 20px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px){
+  .marc h2 {
+    padding: 20px 20px;
+    font-size: 16px;
+  }
+}
+
+.info-wrapper {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 75px);
+  z-index: 100;
+  top: 75px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgb(247, 253, 184);
+  overflow: auto;
+}
+
+@media screen and (max-width: 768px){
+  body{
+    height: 90% !important;
+  }
+  .info-wrapper {
+    top: 55px;
+  }
+  .wrapper{
+    height: 80% !important;
+  }
+  .interactiu{
+    height: 80% !important;
+  }
+}
+.info-wrapper .title {
+  font-size: 26px;
+  margin-bottom: 65px;
+  padding: 20px 100px;
+}
+
+@media screen and (max-width: 768px){
+  .info-wrapper .title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding: 60px 20px 0;
+    position: relative;
+    float: left;
+  }
+}
+.info-wrapper .title p {
+  margin: 0 0 5px;
+}
+.info-wrapper .text {
+  padding: 0 100px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .info-wrapper .text {
+    padding: 0px 20px 20px;
+    font-size: 15px;
+    position: relative;
+    float: left;
+  }
+}
+.info-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+.times {
+  position: fixed;
+  width: auto;
+  height: auto;
+  top: 85px;
+  right: 25px;
+  padding: 10px;
+  cursor: pointer;
+  background: white;
+  border-radius: 50px;
+}
+@media screen and (max-width: 768px){
+  .times {
+    z-index: 100;
+    top: 60px;
+  }
+}
+.times svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 768px){
+  .times svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1250px;
+  height: 95vh;
+  max-width: 100%;
+  grid-auto-columns: 100%;
+  background: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.interactiu {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  float: left;
+  background: rgb(255, 255, 255);
+  /* opacity: 0;
+  visibility: hidden; */
+}
+@media screen and (max-width: 768px){
+  .interactiu {
+    height: 100vh;
+  }
+}
+
+.interactiu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#next {
+  position: absolute;
+  bottom: 0;
+  right: -70px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ---------------- Marc ---------------- */
+.marc {
+  position: relative;
+  background: #b4a588;
+  float: left;
+  width: 100%;
+  height: 75px;
+  z-index: 2;
+  padding: 0 20px 0 0;
+}
+@media screen and (max-width: 768px){
+  .marc {
+    height: 55px;
+  }
+}
+  
+.marc h2 {
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+  display: inline-block;
+}
+.marc a {
+  position: relative;
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 12px 10px;
+  display: inline-block;
+}
+.marc a svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.marc a:first-of-type {
+  margin: 12px 10px 12px 10px;
+}
+@media screen and (max-width: 768px){
+  .marc a {
+    width: 30px;
+    height: 30px;
+    margin: 14px 10px;
+  }
+  .marc a:first-of-type {
+    margin: 14px 10px;
+  }
+}
+.marc a.info .letter { 
+  transition: 0.2s ease-in-out;
+}
+.marc a.info:hover svg .letter {
+  fill: #545043;
+}
+@media screen and (max-width: 768px){
+  .marc a.info:hover svg .letter {
+    fill: black;
+  }
+}
+
+
+/* ---------------- SVG CONTAINER -------------- */
+
+
+.svg-container {
+  float: left;
+  width: 100%;
+  height: 100%; 
+}
+
+@media screen and (max-width: 768px){
+  .svg-container {  
+    height: 100% /*calc(100% - 55px);*/
+  }
+}
+.svg-container text {
+  font-family: 'Helvetica';
+  font-size: 16.6296px;
+}
+.svg-container .drag-el {
+  stroke: blue;
+  fill: none;
+}
